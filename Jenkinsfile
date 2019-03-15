@@ -37,8 +37,7 @@ stage('Building image') {
           docker.build registry + ":$BUILD_NUMBER"
         }
           
-         withDockerRegistry([ credentialsId: 'Docker', url: 'https://cloud.docker.com/repository/docker/dilleswari/learning' ])
-         {
+        
         sh 'docker login -u dilleswari -p l@xmi321'
           sh 'docker push dilleswari/learning:webserver:v1'
           
@@ -52,7 +51,7 @@ stage('Building image') {
 		
 		 
 		
-        }
+        
       }
     }
   
