@@ -37,9 +37,7 @@ stage('Building image') {
           docker.build registry + ":$BUILD_NUMBER"
         }
           
-        sh 'sudo usermod -a -G docker $USER'
-        sh 'docker login -u dilleswari -p l@xmi321'
-          sh 'docker push dilleswari/learning:webserver:v1'
+        
           
           
         script {
