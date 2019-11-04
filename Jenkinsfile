@@ -42,6 +42,7 @@ stage('Building image') {
           
         script {
           docker.build registry + ":$BUILD_NUMBER"
+		 sh'docker login -u dilleswari -p l@xmi321'
 		 sh 'docker build -t dilleswari/webserver:v1 .'
 		 sh 'docker images'
 		 sh 'docker run -it -d webserver:v1 . '
