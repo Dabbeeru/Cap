@@ -25,7 +25,7 @@ node {
       archive 'target/*.war'
    }
    stage("DeployAppTomcat") {
-  sshagent(['give credentials id]) {
+  sshagent(['give credentials id']) {
     sh "scp -o StrictHostKeyChecking=no target/war file name   centos@ip adress:/usr/share/tomcat/webapps/" 
    }
   }
