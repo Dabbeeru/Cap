@@ -1,10 +1,5 @@
 node 
 {
-    stage('Clone sources') {
-        git url: 'https://github.com/Dabbeeru/Cap.git'
-    }
-}
-{
    def M2_HOME="/usr/share/maven"
    stage('getscm') { // for display purposes
       // Get some code from a GitHub repository
